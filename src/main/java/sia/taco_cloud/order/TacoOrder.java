@@ -5,15 +5,26 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 import sia.taco_cloud.model.Taco;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
+@Table("Taco_Order")
 public class TacoOrder {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    private Long id;
+    private Date placedAt;
+
     @NotBlank(message = "Имя, Обязательное поле для заполнения")
+    @Column("customer_name")
     private String deliveryName;
 
     @NotBlank(message = "Улица, Обязательное поле для заполнения")
