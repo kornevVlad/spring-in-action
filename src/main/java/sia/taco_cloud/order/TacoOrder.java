@@ -8,10 +8,15 @@ import org.hibernate.validator.constraints.CreditCardNumber;
 import sia.taco_cloud.model.Taco;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
 public class TacoOrder {
+
+    private static final long serialVersionUID = 1L;
+    private Long id;
+    private Date placedAt;
 
     @NotBlank(message = "Имя, Обязательное поле для заполнения")
     private String deliveryName;

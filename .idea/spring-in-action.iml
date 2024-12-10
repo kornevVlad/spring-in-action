@@ -102,5 +102,10 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.36" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.2.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:2.3.232" level="project" />
   </component>
 </module>
