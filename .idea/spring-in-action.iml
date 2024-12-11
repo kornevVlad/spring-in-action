@@ -18,7 +18,9 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="entityManagerFactory" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -82,13 +84,13 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:3.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.jayway.jsonpath:json-path:2.9.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.activation:jakarta.activation-api:2.1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: jakarta.activation:jakarta.activation-api:2.1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.5.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:2.5.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:9.6" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:9.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.26.3" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy:1.15.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: net.bytebuddy:byte-buddy:1.15.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.awaitility:awaitility:4.2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.11.3" level="project" />
@@ -110,31 +112,35 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.10.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.36" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jdbc:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jdbc:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-relational:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-cassandra:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate.orm:hibernate-core:6.6.2.Final" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.persistence:jakarta.persistence-api:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hibernate.common:hibernate-commons-annotations:7.0.3.Final" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: io.smallrye:jandex:3.2.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-runtime:4.0.5" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:jaxb-core:4.0.5" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.angus:angus-activation:2.0.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.glassfish.jaxb:txw2:4.0.5" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.istack:istack-commons-runtime:4.1.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.inject:jakarta.inject-api:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.13.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-orm:6.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aspects:6.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.22.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:2.3.232" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-cassandra:4.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.cassandra:java-driver-core:4.18.1" level="project" />
+    <orderEntry type="library" name="Maven: com.datastax.oss:native-protocol:1.5.1" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.115.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.datastax.oss:java-driver-shaded-guava:25.1-jre-graal-sub-1" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:config:1.4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jnr-posix:3.1.15" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jnr-ffi:2.2.11" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jffi:1.3.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.jnr:jffi:native:1.3.9" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-analysis:9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-tree:9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-util:9.2" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jnr-a64asm:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jnr-x86asm:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jnr:jnr-constants:0.10.3" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:4.1.18" level="project" />
+    <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.12" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.cassandra:java-driver-query-builder:4.18.1" level="project" />
   </component>
 </module>
