@@ -17,22 +17,18 @@ import com.datastax.oss.driver.api.core.uuid.Uuids;
 import lombok.Data;
 
 @Data
-@Table("tacos")
 public class Taco {
-        @PrimaryKeyColumn(type= PrimaryKeyType.PARTITIONED)
-        private UUID id = Uuids.timeBased();
         @NotNull
         @Size(min = 3, message = "Поле не должно быть пустым, введите свое имя")
         private String name;
 
-        @PrimaryKeyColumn(type=PrimaryKeyType.CLUSTERED, ordering=Ordering.DESCENDING)
         private Date createdAt = new Date();
         @Size(min = 1, message = "Выберите хотя бы один ингредиент")
         @Column("ingredients")
-        private List<IngredientUDT> ingredients = new ArrayList<>();
+        private List<Ingredient> ingredients = new ArrayList<>();
 
         public void addIngredient(Ingredient ingredient) {
-                this.ingredients.add(TacoUDRUtils.toIngredientUDT(ingredient));
+                this.ingredients.add(ingredient);
         }
 }
 
