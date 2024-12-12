@@ -21,7 +21,6 @@ import sia.taco_cloud.dao.IngredientRepository;
 import sia.taco_cloud.model.Ingredient.Type;
 import sia.taco_cloud.model.Ingredient;
 import sia.taco_cloud.model.Taco;
-import sia.taco_cloud.model.TacoUDT;
 import sia.taco_cloud.order.TacoOrder;
 
 
@@ -74,7 +73,7 @@ public class DesignTacoController {
             return "design";
         }
 
-        tacoOrder.addTaco(new TacoUDT(taco.getName(), taco.getIngredients()));
+        tacoOrder.addTaco(taco);
 
         return "redirect:/orders/current";
     }

@@ -8,7 +8,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import sia.taco_cloud.dao.IngredientRepository;
 import sia.taco_cloud.model.Ingredient;
-import sia.taco_cloud.model.Ingredient.Type;
+
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
