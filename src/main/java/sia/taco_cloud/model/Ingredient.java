@@ -1,15 +1,11 @@
 package sia.taco_cloud.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.cassandra.core.mapping.Table;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collection="ingredients")
-@AllArgsConstructor
-@NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
-@Table("ingredients")
+@Entity
 public class Ingredient {
 
     @Id
