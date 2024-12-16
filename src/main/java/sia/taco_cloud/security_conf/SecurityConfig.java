@@ -46,12 +46,18 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/design", "/orders").hasRole("USER")
-                        .requestMatchers("/", "/**").permitAll()
+                        .requestMatchers("/design", "/orders").hasRole("USER")  // Указываем маршруты с ограничением
+                        .anyRequest().permitAll()  // Разрешаем все остальные запросы
                 )
                 .formLogin(form -> form
-                        .loginPage("/login")
+                        .loginPage("/login")  // Указываем страницу логина
+                        .permitAll()          // Разрешаем доступ к странице логина
                 )
+                .oauth2Login(oauth2 -> oauth2
+                        .loginPage("/login")  // Используем OAuth2 авторизацию, если необходимо
+                )
+                
                 .build();
     }
+
 }

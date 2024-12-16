@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import sia.taco_cloud.model.Taco;
+import sia.taco_cloud.model.User;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -48,6 +49,9 @@ public class TacoOrder {
 
     @Digits(integer=3, fraction=0, message="Недействительный CVV")
     private String ccCVV;
+
+    @ManyToOne
+    private User user;
 
     @OneToMany(cascade = CascadeType.ALL) //аннотация для удаления всех Taco связанных с заказом
     private List<Taco> tacos = new ArrayList<>();
